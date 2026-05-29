@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bangalore Home Price Prediction</title>
+    <!-- jQuery CDN: Yeh server se data lane/bhejne ke liye zaroori hai -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- CSS file ko link karna -->
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="img"></div>
+<div class="container">
+    <h2>Bangalore Home Price Prediction</h2>
+    <form class="form">
+
+        <!-- 1. Area Input -->
+        <h2>Area (Square Feet)</h2>
+        <input class="area" type="text" id="uiSqft" name="Squareft" value="1000">
+
+        <!-- 2. BHK Selection -->
+        <h2>BHK</h2>
+        <div class="switch-field">
+            <input type="radio" id="radio-bhk-1" name="uiBHK" value="1"/>
+            <label for="radio-bhk-1">1</label>
+            <input type="radio" id="radio-bhk-2" name="uiBHK" value="2" checked/>
+            <label for="radio-bhk-2">2</label>
+            <input type="radio" id="radio-bhk-3" name="uiBHK" value="3"/>
+            <label for="radio-bhk-3">3</label>
+            <input type="radio" id="radio-bhk-4" name="uiBHK" value="4"/>
+            <label for="radio-bhk-4">4</label>
+        </div>
+
+        <!-- 3. Bathrooms Selection -->
+        <h2>Bath</h2>
+        <div class="switch-field">
+            <input type="radio" id="radio-bath-1" name="uiBathrooms" value="1"/>
+            <label for="radio-bath-1">1</label>
+            <input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" checked/>
+            <label for="radio-bath-2">2</label>
+            <input type="radio" id="radio-bath-3" name="uiBathrooms" value="3"/>
+            <label for="radio-bath-3">3</label>
+            <input type="radio" id="radio-bath-4" name="uiBathrooms" value="4"/>
+            <label for="radio-bath-4">4</label>
+        </div>
+
+        <!-- 4. Location Dropdown (Yeh JavaScript se auto-fill hoga) -->
+        <h2>Location</h2>
+        <div>
+            <select class="location" name="" id="uiLocations">
+                <option value="" disabled selected>Choose a Location</option>
+            </select>
+        </div>
+
+        <!-- 5. Submit Button -->
+        <button class="submit" onclick="onEstimatePriceClicked()" type="button">Estimate Price</button>
+
+        <!-- 6. Result Display Area -->
+        <div id="uiEstimatedPrice" class="result">
+            <h2></h2>
+        </div>
+
+    </form>
+</div>
+
+<!-- JS file ko end mein link karna -->
+<script src="app.js"></script>
+</body>
+</html>
